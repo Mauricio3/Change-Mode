@@ -25,11 +25,10 @@ function changeText() {
     if (body.classList.contains(darkModeTheme)) {
         button.innerHTML = lightMode;
         h1.innerHTML = darkMode + " ON";
-        return;
+    } else {
+        button.innerHTML = darkMode;
+        h1.innerHTML = lightMode + " ON";
     }
-
-    button.innerHTML = darkMode;
-    h1.innerHTML = lightMode + " ON";
 }
 
 button.addEventListener('click', changeMode);
